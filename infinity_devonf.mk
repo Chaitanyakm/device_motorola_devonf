@@ -11,11 +11,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/motorola/devonf/device.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common InfinityX stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := yaap_devonf
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := CHAITANYA
+WITH_GAPPS := true
+
+PRODUCT_NAME := infinity_devonf
 PRODUCT_DEVICE := devonf
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
